@@ -6,7 +6,7 @@ export class PlaywrightPage {
 
     constructor(page: Page) {
         this.page = page;
-        this.h1Header = page.locator('heroTitle_ohkl');
+        this.h1Header = page.locator('.heroTitle_ohkl');
     }
 
     async goto() {
