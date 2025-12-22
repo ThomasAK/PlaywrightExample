@@ -1,4 +1,5 @@
 import {test, expect} from '@playwright/test';
+// @ts-ignore
 import path from 'path';
 import {MainPage} from "../../POM/LoginSite/MainPage";
 import {LoginPage} from "../../POM/LoginSite/LoginPage";
