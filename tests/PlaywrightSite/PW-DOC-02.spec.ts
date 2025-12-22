@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test';
 
-import { PlaywrightPage } from "../../POM/Playwright Site/PlaywrightPage";
+import { PlaywrightPage } from "../../POM/PlaywrightSite/PlaywrightPage";
 
 test.describe('Playwright page h1 header validation', () => {
   let playwrightPage: PlaywrightPage

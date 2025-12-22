@@ -1,7 +1,7 @@
 import {test, expect} from '@playwright/test';
 
-import { PlaywrightPage } from "../../POM/Playwright Site/PlaywrightPage";
-import {Footer} from "../../POM/Playwright Site/Footer";
+import { PlaywrightPage } from "../../POM/PlaywrightSite/PlaywrightPage";
+import {Footer} from "../../POM/PlaywrightSite/Footer";
 
 test.describe('Playwright Footer CopyrightValidation', () => {
     let playwrightPage: PlaywrightPage
