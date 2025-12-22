@@ -1,7 +1,7 @@
 import {test, expect} from '@playwright/test';
 
-import {ReleaseNotes} from "../POM/DOCS/releaseNotes";
-import {SideBar} from "../POM/DOCS/sideBar";
+import {ReleaseNotes} from "../../POM/PlaywrightSite/DOCS/ReleaseNotes";
+import {SideBar} from "../../POM/PlaywrightSite/DOCS/SideBar";
 
 test.describe('Verify Getting Started drop down on release notes can be collapsed', () => {
     let releaseNotes: ReleaseNotes
@@ -14,7 +14,7 @@ test.describe('Verify Getting Started drop down on release notes can be collapse
     })
 
     test('Validate Getting Stated will collapse', async () => {
-        if(!sideBar.gettingStartedDropdown.getAttribute('aria-expanded')) await sideBar.gettingStartedDropdown.click()
+        if(!await sideBar.gettingStartedDropdown.getAttribute('aria-expanded')) await sideBar.gettingStartedDropdown.click()
         await sideBar.gettingStartedDropdown.click()
         await expect(sideBar.gettingStartedDropdown).toHaveAttribute('aria-expanded', 'false');
     })
