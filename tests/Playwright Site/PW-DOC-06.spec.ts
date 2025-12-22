@@ -1,7 +1,7 @@
 import {test, expect} from '@playwright/test';
 
-import {ReleaseNotes} from "../POM/DOCS/releaseNotes";
-import {SideBar} from "../POM/DOCS/sideBar";
+import {ReleaseNotes} from "../../POM/Playwright Site/DOCS/releaseNotes";
+import {SideBar} from "../../POM/Playwright Site/DOCS/sideBar";
 
 test.describe('Verify Getting Started drop down on release notes can be collapsed', () => {
     let releaseNotes: ReleaseNotes
