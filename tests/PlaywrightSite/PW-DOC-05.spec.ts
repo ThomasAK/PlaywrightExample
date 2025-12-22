@@ -1,7 +1,7 @@
 import {test, expect} from '@playwright/test';
 
-import { PlaywrightPage } from "../../POM/Playwright Site/PlaywrightPage";
-import {NavBar} from "../../POM/Playwright Site/NavBar";
+import { PlaywrightPage } from "../../POM/PlaywrightSite/PlaywrightPage";
+import {NavBar} from "../../POM/PlaywrightSite/NavBar";
 
 test.describe('Playwright nav bar validation', () => {
     let playwrightPage: PlaywrightPage
@@ -14,10 +14,10 @@ test.describe('Playwright nav bar validation', () => {
     })
 
     test('Validate Nav bar items', async () => {
-        test.step('validate Nav bar items displayed correctly using screenshot', async () => {
+        await test.step('validate Nav bar items displayed correctly using screenshot', async () => {
             await expect(navBar.navBar).toHaveScreenshot();
         })
-        test.step('validate Nav bar items are visable', async () => {
+        await test.step('validate Nav bar items are visable', async () => {
             await expect(navBar.homeButton).toBeVisible()
             await expect(navBar.apiButton).toBeVisible()
             await expect(navBar.languageButton).toBeVisible()

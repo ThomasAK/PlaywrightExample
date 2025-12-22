@@ -1,7 +1,7 @@
 import {test, expect} from '@playwright/test';
 
-import { PlaywrightPage } from "../../POM/Playwright Site/PlaywrightPage";
-import {NavBar} from "../../POM/Playwright Site/NavBar";
+import { PlaywrightPage } from "../../POM/PlaywrightSite/PlaywrightPage";
+import {NavBar} from "../../POM/PlaywrightSite/NavBar";
 
 test.describe('Playwright search bar validation', () => {
     let playwrightPage: PlaywrightPage
