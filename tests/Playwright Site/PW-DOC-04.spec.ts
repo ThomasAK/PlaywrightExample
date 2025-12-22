@@ -1,7 +1,7 @@
 import {test, expect} from '@playwright/test';
 
-import { PlaywrightPage } from "../POM/PlaywrightPage";
-import {Footer} from "../POM/Footer";
+import { PlaywrightPage } from "../../POM/Playwright Site/PlaywrightPage";
+import {Footer} from "../../POM/Playwright Site/Footer";
 
 test.describe('Playwright Footer CopyrightValidation', () => {
     let playwrightPage: PlaywrightPage
@@ -11,7 +11,6 @@ test.describe('Playwright Footer CopyrightValidation', () => {
         playwrightPage = new PlaywrightPage(page)
         footer = new Footer(page)
         await playwrightPage.goto()
-        await expect(page).toHaveTitle('Fast and reliable end-to-end testing for modern web apps | Playwright')
     })
 
     test('Validate copyright text in Footer', async () => {

@@ -1,4 +1,4 @@
-import { type Locator, type Page } from '@playwright/test';
+import {expect, type Locator, type Page} from '@playwright/test';
 
 export class PlaywrightPage {
     readonly page: Page;
@@ -11,6 +11,7 @@ export class PlaywrightPage {
 
     async goto() {
         await this.page.goto('https://playwright.dev');
+        await expect(this.page).toHaveTitle('Fast and reliable end-to-end testing for modern web apps | Playwright')
     }
 
 
