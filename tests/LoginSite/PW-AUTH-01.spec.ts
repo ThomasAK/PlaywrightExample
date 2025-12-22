@@ -1,7 +1,9 @@
 import {test, expect} from '@playwright/test';
-
+import path from 'path';
 import {MainPage} from "../../POM/LoginSite/MainPage";
 import {LoginPage} from "../../POM/LoginSite/LoginPage";
+
+const authFile = path.join(__dirname, './playwright/.auth/user.json');
 
 test.describe('Main Page Login validation', () => {
     let mainPage: MainPage
@@ -19,5 +21,8 @@ test.describe('Main Page Login validation', () => {
         await mainPage.login(username, password)
         expect(loginPage.page.url()).toContain(loginPage.url)
         await expect(loginPage.header).toContainText(`Welcome, ${username}!`)
+
+        //save storage state
+        await loginPage.page.context().storageState({ path: authFile });
     })
 })
