@@ -4,7 +4,7 @@ import path from 'path';
 import {MainPage} from "../../POM/LoginSite/MainPage";
 import {LoginPage} from "../../POM/LoginSite/LoginPage";
 
-const authFile = path.join(__dirname, './playwright/.auth/user.json');
+const authFile = path.join(__dirname, '../../playwright/.auth/user.json');
 
 test.describe('Main Page Login validation', () => {
     let mainPage: MainPage
