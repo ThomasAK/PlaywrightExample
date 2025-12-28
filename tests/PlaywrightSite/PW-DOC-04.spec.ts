@@ -15,7 +15,7 @@ test.describe('Playwright Footer CopyrightValidation', () => {
 
     test('Validate copyright text in Footer', async () => {
         await expect(footer.copyright).toMatchAriaSnapshot(`
-          - text: /Copyright © [\\^(19|20)]+\\d{2} Microsoft/
+          - text: /Copyright © [\\^(20)]+\\d{2} Microsoft/
         `)
     })
 })

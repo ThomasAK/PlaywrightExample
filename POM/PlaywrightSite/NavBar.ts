@@ -31,7 +31,7 @@ export class NavBar {
         this.communityButton = page.getByRole('link', { name: 'Community' });
         this.githubButton = page.getByLabel('GitHub repository');
         this.discordButton = page.getByLabel('Discord server');
-        this.lightModeButton = page.getByTitle('light mode');
+        this.lightModeButton = page.getByRole('button', { name: 'Switch between dark and light' });
     }
 
     async search(searchInput: string, selector: string): Promise<void> {

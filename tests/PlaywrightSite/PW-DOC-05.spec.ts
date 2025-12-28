@@ -20,6 +20,7 @@ test.describe('Playwright nav bar validation', () => {
         await test.step('validate Nav bar items are visable', async () => {
             await expect(navBar.homeButton).toBeVisible()
             await expect(navBar.apiButton).toBeVisible()
+            await expect(navBar.docsButton).toBeVisible()
             await expect(navBar.languageButton).toBeVisible()
             await expect(navBar.communityButton).toBeVisible()
             await expect(navBar.githubButton).toBeVisible()
